@@ -11,7 +11,7 @@ const Login = () => {
 
     try {
       const response = await fetch(
-        "https://hilr06ht91.execute-api.us-east-2.amazonaws.com/dev/login",
+        `${process.env.REACT_APP_API_BASE_URL}/login`, // Ensure this is set in your .env file
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
